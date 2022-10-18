@@ -1,0 +1,33 @@
+<div id="sessionuser" style="display:none">{{sessionuser}}</div>
+{{#if loggedIn}}
+<section class="container-fluid">
+
+  <div class="row">
+  <div class="col-lg-2"></div>
+
+  <div class="col-lg-8">
+  <form class="make-post-form field w-100">
+  
+  <div class="field">
+    <label class="label textcolorpurple h-25" for="post-content"><h2>Description</h2></label>
+    <div class="">
+      <textarea class="textarea borderpurple w-100" id="post-content" name="post-content" placeholder="This is cool: link to something"></textarea>
+    </div>
+  </div>
+
+
+  <div class="field is-grouped">
+    <div class="">
+      <button type="submit" class="button is-link borderpurple">Make Post</button>
+    </div>
+  </div>
+  </form>
+  </div>
+
+  <div class="col-lg-2"></div>
+  </div>
+
+</section>
+{{/if}}
+
+<script src="/js/add-post.js"></script>

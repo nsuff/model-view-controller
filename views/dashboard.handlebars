@@ -1,0 +1,108 @@
+<div id="sessionuser" style="display:none">{{sessionuser}}</div>
+<div class="column">
+  <article class="">
+    <div class="">
+      <div class="content textcolorwhite text-center">
+        <p>
+          <h1><strong>{{post.user.username}}</strong></h1>
+          <br>
+          {{post.description}}
+          <br>
+        </p>
+      </div>
+
+
+
+      <article class="">
+    
+        <div class="text-center">
+          <div class="field">
+            <p class="">
+              <textarea class="textarea w-100" placeholder="Add a comment..." id="new-comment-text"></textarea>
+            </p>
+          </div>
+          <div class="field">
+            <p class="">
+              <button class="button" id="new-comment-btn">Post comment</button>
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <div class="columns is-mobile">
+        <div class="column">
+          <div class="columns centerall">
+          </div>
+ 
+        <div class="column">
+          <div class="columns">
+            <div class="column is-half">
+              {{#each post.comments}}
+              <div class="card">
+                <div>
+                  <div>
+
+                    {{>comment-details}}
+
+                  </div>
+                </div>
+                {{/each}}
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+      </div>
+    </div>
+  </article>
+</div>
+
+    {{#each potluck.comments}}
+    <div class="box">
+      <article class="media">
+        <div class="media-left">
+        </div>
+
+        <div class="">
+          <div class="content">
+            <p>
+              <strong>{{this.user.username}}</strong> <i class="fa-solid fa-dragon"></i>
+              <br>
+
+              {{>comments}}
+
+            </p>
+          </div>
+          <nav class="level is-mobile">
+            <div class="level-left">
+              <a class="level-item" aria-label="reply">
+                <span class="icon is-small">
+                  <i class="fas fa-reply" aria-hidden="true"></i>
+                </span>
+              </a>
+              <a class="level-item" aria-label="retweet">
+                <span class="icon is-small">
+                  <i class="fas fa-retweet" aria-hidden="true"></i>
+                </span>
+              </a>
+              <a class="level-item" aria-label="like">
+                <span class="icon is-small">
+                  <i class="fas fa-heart" aria-hidden="true"></i>
+                </span>
+              </a>
+              <a class="level-item" aria-label="delete" href="/deletecomment/{{this.id}}">
+                <span class="icon is-small">
+              <i id="trash" class="fa-solid fa-trash"></i>
+              </span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </article>
+    </div>
+    {{/each}}
+
+    <script src="/js/add-food.js"></script>
+    <script src="/js/add-comment.js"></script>
