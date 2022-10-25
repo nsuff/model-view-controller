@@ -1,0 +1,31 @@
+<div id="comment-user" style="display:none">{{comment.user_id}}</div>
+<div id="comment-post" style="display:none">{{comment.post_id}}</div>
+<div id="comment-id" style="display:none">{{comment.id}}</div>
+<div id="sessionuser" style="display:none">{{sessionuser}}</div>
+
+
+<div class="card mx-4 mt-6 mb-4">
+  <br>
+    {{comment.comment_text}}
+  </br>
+
+</div>
+
+
+<section class="column box">
+<form class="">
+  <div class="field">
+    <label for="edit-comment-description">Comment Text</label>
+    <div class="field">
+      <input class="input" type="text" id="edit-comment-description" name="edit-comment-description" placeholder="New Comment Text">
+    </div>
+  </div>
+
+  <button type="submit" class="button is-info" id="edit-btn">Edit</button>
+</form>
+</section>
+
+<button type="submit" class="button is-info" id="delete-btn">Delete</button>
+
+<script src="/js/delete-comment.js"></script>
+<script src="/js/edit-comment.js"></script>
